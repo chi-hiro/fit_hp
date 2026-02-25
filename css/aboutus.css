@@ -1,0 +1,84 @@
+/* =========================
+   section1（FITについて）
+========================= */
+#section-about {
+    position: relative;
+}
+
+/* =========================
+   タイトル・本文
+========================= */
+#section-about .secTitle {
+    color: var(--font-ink);
+}
+#section-about .text-contents {
+    color: var(--font-ink);
+    padding: 0 24px;
+}
+
+/* =========================
+   両サイドの丸い画像
+========================= */
+.about-us-img {
+    display: flex;
+}
+.photo1 {
+    position: absolute;
+    left: clamp(36px, 6vw, 0px);
+    top: clamp(180px, 8vw, 60px);
+    width: clamp(94px, 14vw, 160px);
+    height: auto;
+    aspect-ratio: 1/1;
+    pointer-events: none;
+    background-image: url("../images/main_sec_pic1.jpg");
+    background-size: 480%;
+    background-position: 48% 22%;
+    -webkit-mask-image: radial-gradient(
+        closest-side,
+        #000 32%,
+        transparent 100%
+    );
+    mask-image: radial-gradient(closest-side, #000 32%, transparent 100%);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.08));
+}
+.photo2 {
+    position: absolute;
+    right: clamp(36px, 6vw, 0px);
+    top: clamp(180px, 8vw, 60px);
+    width: clamp(94px, 14vw, 160px);
+    height: auto;
+    aspect-ratio: 1/1;
+    pointer-events: none;
+    background-image: url("../images/main_sec_pic2.jpg");
+    background-repeat: no-repeat;
+    background-size: 390%;
+    background-position: 85% 62%;
+    -webkit-mask-image: radial-gradient(
+        closest-side,
+        #000 32%,
+        transparent 100%
+    );
+    mask-image: radial-gradient(closest-side, #000 32%, transparent 100%);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.08));
+}
+
+/* =========================
+   森の画像の高さ
+========================= */
+#section-about .forest-img {
+    max-width: 1920px;
+    margin: 0 auto;
+    bottom: -360px;
+}
+
+/* ======================================================================
+   レスポンシブ対応
+====================================================================== */
+@media (max-width: 450px) {
+    .photo1 {
+        display: none;
+    }
+    .photo2 {
+        display: none;
+    }
+}

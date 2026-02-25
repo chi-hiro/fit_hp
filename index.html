@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Google Search console -->
+        <meta
+            name="google-site-verification"
+            content="-CQK8wAcI6zr_rDJChU3suPv8Q51W6hk-oMEX4qFMKk"
+        />
+
+        <!-- タイトル・ディスクリプション・ファビコン -->
+        <title>「剪定・伐採・樹木管理｜東京多摩地区の植木屋 FIT」</title>
+        <meta
+            name="description"
+            content="庭木の剪定・伐採・樹木管理ならFIT。熟練の職人が一本一本ていねいに対応し、庭の美しさと健康を守ります。東京多摩地区を中心に迅速に伺います。"
+        />
+        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+        <link rel="icon" href="/images/favicon.ico" />
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <!-- Google Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/hero.css" />
+        <link rel="stylesheet" href="css/aboutus.css" />
+        <link rel="stylesheet" href="css/service.css" />
+        <link rel="stylesheet" href="css/flow.css" />
+        <link rel="stylesheet" href="css/information.css" />
+        <link rel="stylesheet" href="css/slider.css" />
+        <link rel="stylesheet" href="css/wave.css" />
+        <link rel="stylesheet" href="css/validation.css" />
+
+        <!-- OGP設定 -->
+        <meta
+            property="og:title"
+            content="剪定・伐採・樹木管理｜東京多摩地区の植木屋 FIT"
+        />
+        <meta
+            property="og:description"
+            content="庭木の剪定・伐採・樹木管理ならFIT。熟練の職人が一本一本ていねいに対応し、庭の美しさと健康を守ります。東京多摩地区を中心に迅速に伺います。"
+        />
+        <meta
+            property="og:image"
+            content="https://あなたのドメイン/./images/fit_icatch_png2.png"
+        />
+        <meta property="og:url" content="https://あなたのドメイン/" />
+        <meta property="og:site_name" content="FIT" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://example.com/" />
+        <meta name="twitter:card" content="summary_large_image" />
+    </head>
+
+    <body>
+        <!-- ===== 左上 固定ロゴ＋ナビ ===== -->
+        <div class="hero-header-fixed">
+            <!-- ハンバーガー -->
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <!-- モバイル用メニュー -->
+            <nav
+                class="mobile-nav"
+                id="mobile-nav"
+                aria-label="スマホ用メニュー"
+            >
+                <div class="mobile-nav-logo">
+                    <a href="#hero-area">
+                        <img src="images/fit_rogo.svg" alt="FITロゴ" />
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="#section-about">FITについて</a></li>
+                    <li><a href="#section-service">サービス一覧</a></li>
+                    <li><a href="#section-flow">工事の流れ</a></li>
+                    <li><a href="#section-information">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <!-- ロゴ -->
+            <a href="#hero-area" class="site-logo" aria-label="FIT ホーム">
+                <img src="images/fit_rogo.svg" alt="FITロゴ" />
+            </a>
+            <!-- PC用縦メニュー -->
+            <nav class="hero-side-nav" aria-label="セクション目次">
+                <ul>
+                    <li><a href="#section-about">FITについて</a></li>
+                    <li><a href="#section-service">サービス一覧</a></li>
+                    <li><a href="#section-flow">工事の流れ</a></li>
+                    <li><a href="#section-information">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- ===== HeroArea ===== -->
+        <header class="hero" id="hero-area">
+            <!-- 木漏れ日 -->
+            <div class="apple-field" data-density="1" aria-hidden="true"></div>
+            <!-- ヒーロータイトルと画像 -->
+            <div class="hero-inner">
+                <h1 class="visually-hidden">
+                    東京多摩地区の剪定・伐採・樹木管理なら植木屋 FIT
+                </h1>
+                <h2 class="lead reveal-up">木の上で生きてきた、プロの技</h2>
+            </div>
+            <!-- 太陽パララックス -->
+            <div class="layer sun"></div>
+            <!-- 丘パララックス -->
+            <div class="layer hills"></div>
+            <!-- ヒーロー挿絵（3本の木） -->
+            <div class="tree-container">
+                <img
+                    src="images/hero_sec_tree1.png"
+                    alt="木に登って剪定する職人のシルエット"
+                    class="hero-illustration"
+                />
+                <img
+                    src="images/hero_sec_tree2.png"
+                    alt="木に登って剪定する職人のシルエット"
+                    class="hero-illustration"
+                />
+                <img
+                    src="images/hero_sec_tree1.png"
+                    alt="木に登って剪定する職人のシルエット"
+                    class="hero-illustration"
+                />
+            </div>
+            <div class="nav-overlay" id="nav-overlay"></div>
+        </header>
+
+        <!-- ===== MainArea ===== -->
+        <main>
+            <!-- Section 1: FITについて -->
+            <section class="section" id="section-about">
+                <div class="container">
+                    <div class="about-grid">
+                        <!-- ロゴ（小） -->
+                        <div class="fit-logo-wrap reveal-up">
+                            <img src="images/fit_rogo.svg" alt="FITロゴ" />
+                        </div>
+                        <!-- タイトル（縦） -->
+                        <h2 class="secTitle reveal-up">FITについて</h2>
+                        <!-- 本文 -->
+                        <div class="text-contents">
+                            <p class="reveal-up">
+                                私たちFITは、「family」「friend」「flower」「it」「is」「important」「thankyou」「tree」「team」
+                                この9つの言葉を大切にする、剪定・伐採のプロフェッショナルです。一本の木にも、一本の枝にも、そのご家庭や地域の物語があります。
+                                私たちは“整える”だけでなく、“未来を残す”視点を大切にし、自然と人が心地よく共生できる空間づくりを目指しています。
+                                ご家族の笑顔、花や緑の生命、支えてくださるチームとお客様への感謝。そのすべてを心に刻みながら、一本一本の木に想いを込めて手を入れています。
+                            </p>
+                        </div>
+                        <div class="about-us-img">
+                            <!-- 写真の画像１ -->
+                            <div
+                                class="photo1 reveal-up"
+                                aria-hidden="true"
+                                alt="剪定の画像"
+                            ></div>
+                            <!-- 写真の画像２ -->
+                            <div
+                                class="photo2 reveal-up"
+                                aria-hidden="true"
+                                alt="剪定の画像"
+                            ></div>
+                        </div>
+                        <!-- 森の画像 -->
+                        <div class="forest-img">
+                            <img src="images/forest.png" alt="森の画像" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--      仕切り（波線）Section 1とSection 2      -->
+            <div class="wave-sep wave-sep-green" aria-hidden="true">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path
+                        d="M0,78 C300,55 640,92 960,78 C1150,68 1300,66 1440,74 L1440,122 L0,122 Z"
+                    />
+                </svg>
+            </div>
+
+            <!-- Section 2: サービス一覧 -->
+            <section class="section js-trigger" id="section-service">
+                <div class="container">
+                    <div class="service-grid">
+                        <!-- ロゴ（小） -->
+                        <div class="fit-logo-wrap reveal-up">
+                            <img
+                                src="images/fit_rogo_green.svg"
+                                alt="FITロゴ モノクロ版"
+                            />
+                        </div>
+                        <!-- タイトル（縦） -->
+                        <h2 class="secTitle reveal-up">サービス一覧</h2>
+                        <!-- 左葉っぱ -->
+                        <div class="silhouette sil-left-leaf reveal-left-in">
+                            <img src="images/eda.png" alt="" />
+                        </div>
+                        <!-- 本文 -->
+                        <div class="text-contents">
+                            <p class="reveal-up">
+                                剪定・伐採・管理など、季節や庭の状態に合わせて最適なサービスを提供しています。
+                                お客様の暮らしに寄り添い、私と関わって下さる方が笑顔と健康で過ごせる事を願っています。
+                            </p>
+                        </div>
+                        <!-- 作業紹介（4項目） -->
+                        <div class="works-grid-cards reveal-up">
+                            <!-- 1 -->
+                            <article class="work-card t1">
+                                <div class="icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <image
+                                            href="images/service_sec_sil1.png"
+                                            width="100"
+                                            height="100"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3>ロープワーク剪定</h3>
+                                <p>高所の枝を安全に、的確に剪定します。</p>
+                                <h4 class="scene">ご利用シーン</h4>
+                                <ul class="checks">
+                                    <li>高所作業が必要</li>
+                                    <li>狭所でクレーン不可</li>
+                                </ul>
+                            </article>
+                            <!-- 2 -->
+                            <article class="work-card t2">
+                                <div class="icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <image
+                                            href="images/service_sec_sil2.png"
+                                            width="100"
+                                            height="100"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3>樹木管理</h3>
+                                <p>樹木の健康を守り、美しい景観を保ちます。</p>
+                                <h4 class="scene">ご利用シーン</h4>
+                                <ul class="checks">
+                                    <li>定期的な診断・剪定</li>
+                                    <li>害虫・病気対策</li>
+                                </ul>
+                            </article>
+                            <!-- 3 -->
+                            <article class="work-card t3">
+                                <div class="icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <image
+                                            href="images/service_sec_sil3.png"
+                                            width="100"
+                                            height="100"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3>伐採</h3>
+                                <p>
+                                    成長しすぎた木や、自然災害への対策をします。
+                                </p>
+                                <h4 class="scene">ご利用シーン</h4>
+                                <ul class="checks">
+                                    <li>成長しすぎた木</li>
+                                    <li>台風対策等</li>
+                                </ul>
+                            </article>
+                            <!-- 4 -->
+                            <article class="work-card t4">
+                                <div class="icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <image
+                                            href="images/service_sec_sil4.png"
+                                            width="100"
+                                            height="100"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3>その他</h3>
+                                <p>
+                                    身の回りの草木で気になる事、ご相談下さい！
+                                </p>
+                                <h4 class="scene">ご利用シーン</h4>
+                                <ul class="checks">
+                                    <li>お庭等の点検・補修</li>
+                                    <li>定期メンテナンス</li>
+                                </ul>
+                            </article>
+                        </div>
+                        <!-- 右葉っぱ ===== -->
+                        <div class="right-edge js-edge">
+                            <img src="images/eda.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <!--      スライダー設定      -->
+                <div class="slider-container">
+                    <div class="flow-gallery">
+                        <div class="flow-track">
+                            <div class="flow-item">
+                                <img src="images/slider1.jpg" alt="" />
+                            </div>
+                            <div class="flow-item">
+                                <img src="images/slider2.jpg" alt="" />
+                            </div>
+                            <div class="flow-item">
+                                <img src="images/slider3.jpg" alt="" />
+                            </div>
+                            <div class="flow-item">
+                                <img src="images/slider4.jpg" alt="" />
+                            </div>
+                            <div class="flow-item">
+                                <img src="images/slider5.jpg" alt="" />
+                            </div>
+
+                            <!-- 無限ループ用に複製 -->
+                            <div class="flow-item">
+                                <img src="images/slider1.jpg" alt="" />
+                            </div>
+                            <div class="flow-item">
+                                <img src="images/slider2.jpg" alt="" />
+                            </div>
+                            <div class="flow-item">
+                                <img src="images/slider3.jpg" alt="" />
+                            </div>
+                            <div class="flow-item">
+                                <img src="images/slider4.jpg" alt="" />
+                            </div>
+                            <div class="flow-item">
+                                <img src="images/slider5.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--      仕切り（波線）Section 2とSection 3      -->
+            <div
+                class="wave-sep wave-sep-deepgreen flip one"
+                aria-hidden="true"
+            >
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path
+                        d="M1440,0 C1140,15 800,70 480,50 C290,40 140,35 0,45 L0,122 L1440,122 Z"
+                    />
+                </svg>
+            </div>
+
+            <!-- Section 3: 工事の流れ -->
+            <section class="section" id="section-flow">
+                <div class="container">
+                    <div class="flow_container reveal-up">
+                        <!-- ===== ロゴ（小） ===== -->
+                        <div class="fit-logo-wrap">
+                            <img
+                                src="images/fit_rogo_mono.svg"
+                                alt="FITロゴ モノクロ版"
+                            />
+                        </div>
+                        <!-- ===== タイトル（縦） ===== -->
+                        <h2 class="secTitle reveal-up">工事の流れ</h2>
+                        <!-- ===== シルエット背景画像 ===== -->
+                        <div class="silhouette sil-sentei"></div>
+                        <!-- ===== 本文 ===== -->
+                        <div class="text-contents">
+                            <p class="reveal-up">
+                                樹木の一本一本に向き合い、状態を見極めながら丁寧に手を入れています。
+                                大切な植栽を安心して任せていただけるよう、
+                                お客様の「声を聞く」ことを何より大切にしています。
+                            </p>
+                        </div>
+                        <!-- /.contents -->
+                        <!-- ===== 工事の流れリスト ===== -->
+                        <ol class="flow-rail">
+                            <!-- STEP 1 -->
+                            <li class="flow-step reveal-up">
+                                <article class="step-card">
+                                    <div class="step-grid">
+                                        <div class="col-text">
+                                            <h3>
+                                                １．お問い合わせ・ヒアリング
+                                            </h3>
+                                            <p>
+                                                お問い合わせフォームからご相談いただいた内容について、<br
+                                                    class="pc-disblock"
+                                                />お電話等で詳しくお聞きします。
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="col-pic"
+                                            alt="お問い合わせ・ヒアリング画像"
+                                        ></div>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <!-- STEP 2 -->
+                            <li class="flow-step reveal-up">
+                                <article class="step-card">
+                                    <div class="step-grid">
+                                        <div class="col-text">
+                                            <h3>２．現地でお打ち合わせ</h3>
+                                            <p>
+                                                ヒアリングを踏まえた資料等を持って現地へお伺いし、<br
+                                                    class="pc-disblock"
+                                                />対面でお打ち合わせします。
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="col-pic"
+                                            alt="現地でお打ち合わせ"
+                                        ></div>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <!-- STEP 3 -->
+                            <li class="flow-step reveal-up">
+                                <article class="step-card">
+                                    <div class="step-grid">
+                                        <div class="col-text">
+                                            <h3>３．施工開始</h3>
+                                            <p>
+                                                正式にご依頼いただいた後、<br
+                                                    class="pc-disblock"
+                                                />
+                                                時期とタイミングを見て
+                                                施工を開始いたします。
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="col-pic"
+                                            alt="施工開始画像"
+                                        ></div>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <!-- STEP 4 -->
+                            <li class="flow-step reveal-up">
+                                <article class="step-card">
+                                    <div class="step-grid">
+                                        <div class="col-text">
+                                            <h3>４．完成・お支払い</h3>
+                                            <p>
+                                                正式にご依頼いただいた後、<br
+                                                    class="pc-disblock"
+                                                />
+                                                時期とタイミングを見て
+                                                施工を開始いたします。
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="col-pic"
+                                            alt="完成・お支払い画像"
+                                        ></div>
+                                    </div>
+                                </article>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- 森の画像 -->
+                    <div class="forest-img">
+                        <img src="images/forest.png" alt="FITロゴ" />
+                    </div>
+                </div>
+            </section>
+            <!--      仕切り（波線）Section 3とSection 4      -->
+            <div class="wave-sep wave-sep-terracotta" aria-hidden="true">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path
+                        d="
+    M0,85
+    C300,70 550,105 720,80
+    C890,55 1140,85 1440,65
+    L1440,122 L0,122 Z
+"
+                    />
+                </svg>
+            </div>
+
+            <!-- Section 4: お問い合わせ -->
+            <section class="section" id="section-information">
+                <div class="container">
+                    <!-- 木漏れ日 -->
+                    <div
+                        class="apple-field"
+                        data-density="1.5"
+                        aria-hidden="true"
+                    ></div>
+                    <div class="paper-box">
+                        <!-- ロゴ（小） -->
+                        <div class="fit-logo-wrap reveal-up">
+                            <img
+                                src="images/fit_rogo_info.svg"
+                                alt="FITロゴ モノクロ版"
+                            />
+                        </div>
+                        <!-- タイトル（縦） -->
+                        <h2 class="secTitle reveal-up">お問い合わせ</h2>
+                        <!-- 本文 -->
+                        <div class="text-contents reveal-up">
+                            <p>
+                                下記の入力フォームに必要事項をご入力のうえ、<br
+                                    class="pc-disblock"
+                                />
+                                「送信内容の確認」ボタンをクリックしてください。<br
+                                    class="pc-disblock"
+                                />
+                                お問い合わせいただいた内容につきましては、折り返しご連絡いたします。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- お問い合わせフォーム -->
+                    <form class="fit-form reveal-up" novalidate>
+                        <!-- ご用件 -->
+                        <fieldset class="fit-fieldset">
+                            <legend class="fit-legend">ご用件</legend>
+                            <div class="fit-grid">
+                                <label class="fit-check">
+                                    <input
+                                        type="checkbox"
+                                        name="topic"
+                                        value="pruning"
+                                    />
+                                    <span>木の剪定・伐採について</span>
+                                </label>
+                                <label class="fit-check">
+                                    <input
+                                        type="checkbox"
+                                        name="topic"
+                                        value="garden"
+                                    />
+                                    <span>庭づくりについて</span>
+                                </label>
+                                <label class="fit-check">
+                                    <input
+                                        type="checkbox"
+                                        name="topic"
+                                        value="weeding"
+                                    />
+                                    <span>除草作業について</span>
+                                </label>
+                                <label class="fit-check">
+                                    <input
+                                        type="checkbox"
+                                        name="topic"
+                                        value="plantcare"
+                                    />
+                                    <span>植栽管理について</span>
+                                </label>
+                                <label class="fit-check">
+                                    <input
+                                        type="checkbox"
+                                        name="topic"
+                                        value="chemical"
+                                    />
+                                    <span>薬剤散布について</span>
+                                </label>
+                                <label class="fit-check">
+                                    <input
+                                        type="checkbox"
+                                        name="topic"
+                                        value="other"
+                                    />
+                                    <span>その他</span>
+                                </label>
+                            </div>
+                            <div
+                                class="fit-valid-panel"
+                                id="topic-panel"
+                                hidden
+                            >
+                                <p class="rule" data-rule="required">
+                                    ※いずれか一つ以上お選びください。
+                                </p>
+                                <p class="rule" data-rule="allowed">
+                                    無効な選択肢が含まれています
+                                </p>
+                            </div>
+                        </fieldset>
+
+                        <!-- お名前 -->
+                        <div class="fit-row">
+                            <label class="fit-label" for="name"
+                                >お名前
+                                <span class="req-badge">必須</span></label
+                            >
+                            <input
+                                class="fit-input"
+                                id="name"
+                                name="name"
+                                type="text"
+                                required
+                            />
+                            <!-- バリデーションパネル（追加） -->
+                            <div class="fit-valid-panel" id="name-panel" hidden>
+                                <p class="rule" data-rule="required">
+                                    ○ 入力してください
+                                </p>
+                                <p class="rule" data-rule="length">
+                                    ○ 30文字以内で入力してください
+                                </p>
+                                <p class="rule" data-rule="charset">
+                                    ○ 使用できない文字が含まれています
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- メール -->
+                        <div class="fit-row">
+                            <label class="fit-label" for="email"
+                                >メールアドレス
+                                <span class="req-badge">必須</span></label
+                            >
+                            <input
+                                class="fit-input"
+                                id="email"
+                                name="email"
+                                type="email"
+                                inputmode="email"
+                                autocomplete="email"
+                                required
+                            />
+                            <!-- バリデーションパネル（追加） -->
+                            <div
+                                class="fit-valid-panel"
+                                id="email-panel"
+                                hidden
+                            >
+                                <p class="rule" data-rule="required">
+                                    ○ 入力してください
+                                </p>
+                                <p class="rule" data-rule="format">
+                                    ○ 正しいメールアドレス形式で入力してください
+                                </p>
+                                <p class="rule" data-rule="nozenkaku">
+                                    ○ 全角文字は使用できません
+                                </p>
+                                <p class="rule" data-rule="localdomain">
+                                    ○
+                                    @の前後が正しく入力されている必要があります
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- お電話 -->
+                        <div class="fit-row">
+                            <label class="fit-label" for="tel"
+                                >お電話
+                                <span class="req-badge">必須</span></label
+                            >
+                            <input
+                                class="fit-input"
+                                id="tel"
+                                name="tel"
+                                type="tel"
+                                inputmode="tel"
+                                placeholder="090-1234-5678"
+                                pattern="^[0-9０-９\-+\s()]{8,}$"
+                                required
+                            />
+                            <!-- バリデーションパネル（追加） -->
+                            <div class="fit-valid-panel" id="tel-panel" hidden>
+                                <p class="rule" data-rule="required">
+                                    ○ 入力してください
+                                </p>
+                                <p class="rule" data-rule="format">
+                                    ○ 半角数字とハイフンのみ使用できます
+                                </p>
+                                <p class="rule" data-rule="length">
+                                    ○ 10〜11桁で入力してください
+                                </p>
+                                <p class="rule" data-rule="hyphen">
+                                    ○ ハイフンの位置が正しくありません
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- ご予算 -->
+                        <div class="fit-row">
+                            <label class="fit-label" for="budget"
+                                >ご予算
+                                <span class="req-badge">必須</span></label
+                            >
+                            <select
+                                class="fit-select"
+                                id="budget"
+                                name="budget"
+                                required
+                            >
+                                <option value="" hidden>
+                                    選択してください
+                                </option>
+                                <option>〜 10万円</option>
+                                <option>10〜30万円</option>
+                                <option>30〜50万円</option>
+                                <option>50〜100万円</option>
+                                <option>100万円〜</option>
+                                <option>相談したい</option>
+                            </select>
+                            <!-- ★ バリデーションパネルを追加（budget専用） -->
+                            <div
+                                class="fit-valid-panel"
+                                id="budget-panel"
+                                hidden
+                            >
+                                <p class="rule" data-rule="required">
+                                    ○ ご予算を選択してください
+                                </p>
+                                <p class="rule" data-rule="allowed">
+                                    ○ 許可された選択肢のみ選べます
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- お問い合わせ内容 -->
+                        <div class="fit-row">
+                            <label class="fit-label" for="message"
+                                >お問い合わせ内容</label
+                            >
+                            <textarea
+                                class="fit-textarea"
+                                id="message"
+                                name="message"
+                                rows="6"
+                            ></textarea>
+                            <!-- ★ バリデーションパネル（追加） -->
+                            <div
+                                class="fit-valid-panel"
+                                id="message-panel"
+                                hidden
+                            >
+                                <p class="rule" data-rule="required">
+                                    ○ 入力してください
+                                </p>
+                                <p class="rule" data-rule="length">
+                                    ○ 1000文字以内で入力してください
+                                </p>
+                                <p class="rule" data-rule="charset">
+                                    ○ 使用できない文字が含まれていません
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 送信 -->
+                        <div class="fit-actions">
+                            <button type="submit" class="fit-button">
+                                送信内容の確認
+                                <span
+                                    class="btn-arrow"
+                                    aria-hidden="true"
+                                ></span>
+                            </button>
+                        </div>
+                    </form>
+                    <!-- 確認画面（confirm-screen） -->
+                    <div id="confirm-screen" hidden class="fit-confirm-wrapper">
+                        <div class="fit-confirm-box">
+                            <h2 class="fit-confirm-title">入力内容のご確認</h2>
+
+                            <dl class="fit-confirm-list">
+                                <!-- JSがここに項目を挿入する -->
+                            </dl>
+                            <div class="fit-confirm-actions">
+                                <button
+                                    type="button"
+                                    id="confirm-back"
+                                    class="fit-button secondary"
+                                >
+                                    戻る
+                                </button>
+
+                                <button
+                                    type="button"
+                                    id="confirm-submit"
+                                    class="fit-button"
+                                >
+                                    この内容で送信する
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 左葉っぱ -->
+                    <div class="sil-left-leaf">
+                        <img src="images/eda.png" alt="" />
+                    </div>
+                </div>
+                <!--      Section 4とフッターの仕切り（波線）      -->
+                <div class="wave-sep wave-sep-beige is-back" aria-hidden="true">
+                    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                        <!-- 下端を 120→122 に延長（隙間対策） -->
+                        <path
+                            d="M0,0 C300,0 640,100 960,60 C1150,40 1300,30 1440,40 L1440,122 L0,122 Z"
+                        />
+                    </svg>
+                </div>
+            </section>
+        </main>
+
+        <footer>&copy; 2025 Fit</footer>
+        <script src="./script/main.js" defer></script>
+        <script src="./script/validation.js" defer></script>
+    </body>
+</html>

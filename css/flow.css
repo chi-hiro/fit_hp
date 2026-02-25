@@ -1,0 +1,190 @@
+/* =========================
+   section3（作業の流れ）
+========================= */
+
+/* =========================
+   タイトル・本文
+========================= */
+#section-flow .secTitle {
+    color: var(--font-ink);
+}
+#section-flow .text-contents p {
+    text-align: center;
+    color: var(--font-ink);
+}
+.flow_container {
+    position: relative;
+}
+
+/* =========================
+   剪定シルエットシルエット画像
+========================= */
+#section-flow .sil-sentei {
+    position: absolute;
+    right: 40px;
+    top: clamp(90px, 8vw, 70px);
+    width: clamp(100px, 14vw, 150px);
+    height: auto;
+    aspect-ratio: 1/1;
+    background: url("../images/silhouette22.png") center/cover no-repeat;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* =========================
+   フロー
+========================= */
+.flow-rail {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    /* position: relative; */
+}
+/* 各ステップのカード */
+.step-card {
+    background: #f8f5ef;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    padding: 24px 50px;
+    margin: clamp(18px, 3vw, 28px) 0;
+}
+.col-num {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+.col-text h3 {
+    margin: 0 0 0.5em;
+    font-size: 16px;
+    color: var(--accent-green, #4f7f60);
+}
+.col-text p {
+    margin: 0 0 0 0.5em;
+    color: var(--font-ink);
+    line-height: 2;
+}
+.step-grid {
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    grid-template-areas: "text pic";
+    column-gap: 24px;
+    row-gap: 12px;
+    align-items: center;
+}
+/* 奇数行（1,3,5…）：テキスト左 7：3 画像 */
+.flow-step:nth-child(odd) .step-grid {
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "text pic"; /* ← 左: text / 右: pic */
+}
+
+/* 偶数行（2,4,6…）：画像左 3：7 テキスト（反転） */
+.flow-step:nth-child(even) .step-grid {
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "pic text"; /* ← 左: pic / 右: text */
+}
+
+/* エリア割り当て（全行共通） */
+.col-text {
+    grid-area: text;
+}
+
+.col-pic {
+    grid-area: pic;
+}
+
+/* =========================
+   フロー内の丸画像
+========================= */
+.col-pic {
+    position: relative;
+    width: clamp(100px, 12vw, 180px);
+    height: clamp(100px, 12vw, 180px);
+    margin-inline: auto;
+    border-radius: 50%;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    background: center/cover no-repeat;
+    transition:
+        background-position 0.3s ease,
+        background-size 0.3s ease;
+}
+.flow-step:nth-child(1) .col-pic {
+    background-image: url("../images/main_sec_flow_pic1.jpg");
+    background-size: 160%;
+    background-position: 40% 55%;
+}
+.flow-step:nth-child(2) .col-pic {
+    background-image: url("../images/main_sec_flow_pic2.jpg");
+    background-size: 320%;
+    background-position: 98% 25%;
+}
+.flow-step:nth-child(3) .col-pic {
+    background-image: url("../images/main_sec_flow_pic3.jpg");
+    background-size: 170%;
+    background-position: 30% 80%;
+}
+.flow-step:nth-child(4) .col-pic {
+    background-image: url("../images/main_sec_flow_pic4.jpg");
+    background-size: 140%;
+    background-position: 50% 45%;
+}
+
+/* =========================
+   森の画像の高さ
+========================= */
+#section-flow .forest-img {
+    max-width: 1920px;
+    margin: 0 auto;
+    bottom: -390px;
+}
+
+/* ======================================================================
+   レスポンシブ対応
+====================================================================== */
+@media (max-width: 1200px) {
+    .flow-rail {
+        max-width: 720px;
+    }
+}
+@media (max-width: 1024px) {
+    .flow-step {
+        margin: 0 auto;
+    }
+    .step-grid {
+        display: grid;
+        grid-template-columns: 1fr 40%;
+        grid-template-areas: "text pic";
+        column-gap: 24px;
+        row-gap: 12px;
+        align-items: center;
+    }
+    .col-text h3 {
+        margin: 0;
+    }
+    .col-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flow-step:nth-child(odd) .step-grid,
+    .flow-step:nth-child(even) .step-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "pic"
+            "text";
+    }
+    .col-text h3 {
+        text-align: center;
+        font-size: 14px;
+    }
+    .col-text p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    #section-flow .sil-sentei {
+        display: none;
+    }
+}

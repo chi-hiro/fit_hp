@@ -1,0 +1,102 @@
+.fit-valid-panel {
+    background: #fff;
+    border: 1px solid #e4ded8;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+    line-height: 1.5;
+    animation: fadeIn 0.2s ease;
+    pointer-events: none;
+}
+.fit-valid-panel .rule {
+    margin: 4px 0;
+    pointer-events: none;
+}
+/* ルールの状態 */
+.fit-valid-panel .invalid {
+    color: #d34; /* エラー色 */
+}
+.fit-valid-panel .valid {
+    color: #3aa364; /* OK 色（緑） */
+}
+/* バリテーションルール背景 */
+.fit-valid-panel {
+    background: #fff;
+    border: 2px solid rgb(245, 238, 230);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-top: 8px;
+    box-shadow: 0 4px 8 px rgba(0,0,0,0.05);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ======================================
+   確認画面：全体
+====================================== */
+.fit-confirm-wrapper {
+    padding: 32px 0;
+}
+
+/* 中央カード */
+.fit-confirm-box {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fdf8f4; /* FITのベージュ */
+    border: 1px solid #e8ddd7;
+    border-radius: 16px;
+    padding: 32px 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* タイトル */
+.fit-confirm-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 28px;
+    color: var(--font-ink);
+}
+
+/* 確認リスト */
+.fit-confirm-list dt {
+    font-weight: 600;
+    margin-top: 20px;
+    color: var(--font-ink);
+}
+
+.fit-confirm-list dd {
+    margin-top: 6px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #e8ddd7;
+    border-radius: 10px;
+    line-height: 1.6;
+    color: var(--font-ink);
+}
+
+/* ボタン配置 */
+.fit-confirm-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.fit-button.secondary {
+    background: #ffffff;
+    color: var(--font-ink);
+    border: 1px solid #c9bdb7;
+}
+
+.fit-button.secondary:hover {
+    background: #f3ece7;
+}

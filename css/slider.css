@@ -1,0 +1,104 @@
+/* =========================
+   sliderの設定
+========================= */
+.slider-container {
+    padding-top: 60px;
+
+}
+
+.flow-gallery {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .0);
+    padding: 40px 0;
+}
+
+/* 横に並ぶ帯（レーン） */
+.flow-track {
+    display: flex;
+    gap: 130px;
+    animation: flow 45s linear infinite;
+}
+
+/* 横スクロールアニメ */
+@keyframes flow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 写真 */
+.flow-item {
+    position: relative;
+    z-index: 1;
+}
+
+.flow-item img {
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+    /* 発光エフェクト */
+    filter: drop-shadow(0 0 4px rgb(245, 238, 230, 0.6));
+}
+
+/* 写真の“自然なズレ” */
+.flow-item:nth-child(odd) img {
+    margin-top: 58px;
+}
+
+.flow-item:nth-child(even) img {
+    margin-top: 0;
+}
+
+/* 水彩スタンプ背景 */
+.flow-item::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -50%; /* ← 下にずらす（重要） */
+    transform: translateX(-50%);
+    width: 140%; /* ← 写真より大きく敷く */
+    height: 140%;
+    background-repeat: no-repeat;
+    background-size: contain; /* ← 必須 */
+    opacity: 1;
+    z-index: -1; /* ← 背面に配置（重要） */
+}
+
+/* 奇数：少し大きく・少し右寄り・下寄り */
+.flow-item:nth-child(odd)::before {
+    background-image: url("../images/watercolor-green.png");
+    bottom: -17%; /* ← 奇数の位置 */
+    left: 68%; /* ← 横位置だけズラす */
+}
+
+/* 偶数：やや上・やや左寄り */
+.flow-item:nth-child(even)::before {
+    background-image: url("../images/watercolor-blue.png");
+    bottom: -55%; /* ← 偶数の位置 */
+    left: 14%; /* ← 横位置だけズラす */
+}
+
+/* ======================================================================
+   レスポンシブ対応
+====================================================================== */
+@media (max-width: 768px) {
+    .flow-track {
+        gap: 30px;
+        animation-duration: 30s;
+    }
+    .flow-item img {
+        height: 150px;
+    }
+    .flow-item::before {
+        background-size: 150% auto;
+        opacity: 0.25;
+        transform: translate(-8px, 8px);
+    }
+    .flow-item:nth-child(odd) img {
+        margin-top: 12px;
+    }
+}

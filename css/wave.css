@@ -1,0 +1,74 @@
+/* =========================
+   Wave separator (共通)
+========================= */
+.wave-sep {
+    position: relative;
+    line-height: 0;
+    height: 120px;
+    overflow: hidden;
+}
+
+.wave-sep-reverse {
+    height: 450px;
+}
+.wave-sep svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0.5px); /* 隙間防止 */
+}
+.wave-sep.flip.one svg {
+    transform: scaleY(-1);
+    transform-origin: center;
+}
+
+/* カラーバリエーション */
+.wave-sep-deepgreen path {
+    fill: var(--wave-fill-deepgreen);
+}
+.wave-sep-green path {
+    fill: var(--wave-fill-green);
+}
+.wave-sep-terracotta path {
+    fill: var(--wave-fill-terracotta);
+}
+.wave-sep-beige path {
+    fill: var(--accent-beige);
+}
+
+/* 最終sectionとfooterとの間のなみなみ */
+.wave-sep.is-back {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120px;
+    width: 115vw;
+    height: clamp(260px, 34vw, 560px);
+    overflow: visible;
+    pointer-events: none;
+    z-index: -1;
+}
+#section-information > .wave-sep.is-back {
+    position: absolute !important; /* 既存relativeを打ち消し */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -150px !important; /* ← 覆い量：-80〜-220pxで微調整OK */
+    width: 122vw !important; /* ← 横は広めにして端のスキマ防止 */
+    height: min(60vh, 640px) !important; /* ← 大きく覆う */
+    line-height: 0 !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+    z-index: 1 !important; /* フォーム(2)の背面、背景より前 */
+}
+#section-information > .wave-sep.is-back svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#section-information > .wave-sep.is-back path {
+    fill: var(--accent-beige);
+}
+
+.wave-sep .wave-sep-deepgreen .flip .one {
+    z-index: 2;
+}

@@ -1,0 +1,182 @@
+/* =========================
+   Base / Variables
+========================= */
+:root {
+    /* containerの最大幅 */
+    --max: 1080px;
+    --hero-max: 1280px;
+
+    /* navの縮小設定 */
+    --nav-scale: clamp(0.7, calc(100vw / 1280), 1);
+
+    /* フォントの色で使用 */
+    --font-ink: #605c5b;
+    --font-green: #284731;
+
+    /* waveの色設定 */
+    --wave-fill-deepgreen: #9fba9d;
+    --wave-fill-green: #dbe8dd;
+    --wave-fill-terracotta: #f3d5cc;
+
+    /* silhouetteの色設定 */
+    --fit-silhouette-filter: brightness(0) saturate(100%) invert(32%) sepia(13%)
+        saturate(829%) hue-rotate(95deg) brightness(90%) contrast(90%);
+
+    /* ホームページのメインカラー */
+    /* sec1,sec2,sec3,sec4 */
+    --accent-beige: #f6efe6;
+    /* sec2,sec3 */
+    --accent-green: #4f7f60;
+    /* sec4 */
+    --accent-orange: #b85d4c;
+}
+
+/* 滑らかに */
+html {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+/* bodyカラー */
+body {
+    background-color: var(--accent-beige);
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+/* 共通設定 */
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    position: relative;
+}
+
+/* container設定 */
+.container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding-inline: 84px; /* ← 小さな内側余白を追加 */
+    position: relative;
+}
+/* hero-container設定 */
+.hero-container {
+    width: min(100%, var(--hero-max));
+    margin-inline: auto;
+    position: relative;
+}
+
+/* Reveal-up（フワッと表示 is-inはjs制御） */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+    line-height: 2.8;
+}
+.reveal-up.is-in {
+    opacity: 1;
+    transform: none;
+}
+
+/* ロゴ（小） */
+.fit-logo-wrap {
+    text-align: center;
+    margin-bottom: 0;
+}
+.fit-logo-wrap img {
+    width: clamp(32px, 6vw, 45px);
+    height: auto;
+    filter: contrast(0.9);
+}
+
+/* Sections 共通 */
+.section {
+    position: relative;
+    padding: 80px 0 200px;
+}
+
+/* secTitle（縦書き） */
+.secTitle {
+    margin: 10px 0 0 0;
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: "Shippori Mincho", serif;
+    letter-spacing: 0.5em;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 35px;
+    color: var(--ink);
+}
+
+/* secText（本文） */
+.text-contents {
+    max-width: 720px;
+    margin: 0 auto;
+}
+.text-contents p {
+    line-height: 3.5;
+    margin: 40px 0 40px;
+}
+
+/* 左側の葉っぱ共通設定 */
+.sil-left-leaf {
+    position: absolute;
+    z-index: 3;
+}
+
+/* 森の画像共通設定 */
+.forest-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    overflow: hidden; /* はみ出しを隠す（見切れ効果） */
+    width: 100vw; /* 表示範囲は画面幅 */
+    filter: hue-rotate(-25deg) brightness(1.2) saturate(1.4);
+}
+
+.forest-img img {
+    width: 1800px; /* 画像サイズ固定 */
+    max-width: none; /* 勝手に縮小しない */
+    height: auto;
+    display: block;
+    pointer-events: none;
+}
+
+/* PC版では改行 */
+.pc-disblock {
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 60px 0 80px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ======================================================================
+   レスポンシブ対応
+====================================================================== */
+@media (max-width: 1024px) {
+    .container {
+        padding-inline: 24px; /* ← 小さな内側余白を追加 */
+    }
+}
+@media (max-width: 768px) {
+    .secTitle {
+        font-size: 18px;
+    }
+    .text-contents p {
+        line-height: 3.5;
+        margin: 40px 0 40px;
+        font-size: 12px;
+    }
+}
